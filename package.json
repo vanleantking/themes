@@ -1,0 +1,11 @@
+{
+  "name": "ex-theme-chickensoup",
+  "version": "1.0.0",
+  "description": "an example for use webpack - yarn and tailwind css on build theme",
+  "main": "index.js",
+  "author": "wanlee",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.94.0"
+  }
+}
