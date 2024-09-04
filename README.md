@@ -27,3 +27,5 @@ Ref:
 `https://gist.github.com/bradtraversy/1c93938c1fe4f10d1e5b0532ae22e16a`
 `https://dev.to/j45t7/webpack-tailwind-css-setup-35bm`
 `https://tailwindcss.com/docs/installation/using-postcss`
+`https://viblo.asia/p/ban-co-biet-ve-postcss-Qbq5QrkJKD8`
+`https://dev.to/mustafamilyas/brief-explanation-of-javascript-module-bundler-b1k`
