@@ -19,11 +19,32 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.css$/i,
-        include: path.resolve(__dirname, './src/styles/'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
-      },
+        {
+            test: /\.scss$/i,
+            include: path.resolve(__dirname, './src/styles/'),
+            use: [
+                'style-loader',
+                {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                },
+                'postcss-loader', // Handles Tailwind and other PostCSS plugins,
+                {
+                    loader: 'sass-loader',
+                    options: {
+                      sassOptions: {outputStyle: 'expanded'},
+                      sourceMap: true
+                    }
+                  }
+            ],
+        },
+        {
+            test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+            type: 'asset/resource',
+            generator: {
+                filename: 'webfonts/[name][ext]', // Output to 'webfonts' directory in 'dist'
+            },
+        },
     ],
   },
 }

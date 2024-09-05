@@ -29,3 +29,4 @@ Ref:
 `https://tailwindcss.com/docs/installation/using-postcss`
 `https://viblo.asia/p/ban-co-biet-ve-postcss-Qbq5QrkJKD8`
 `https://dev.to/mustafamilyas/brief-explanation-of-javascript-module-bundler-b1k`
+`https://viblo.asia/p/webpack-5-webpack-sass-loader-aWj533GP56m`
