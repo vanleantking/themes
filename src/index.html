@@ -12,57 +12,68 @@
         <header class="bg bg-cyan-900">
             <div class="container mx-auto flow-root flex-row">
                 <!-- 1. header: contact social icon -->
-                <div class="contact-info float-left flow-root py-6 align-middle">
-                    <div class="float-left flex items-center">
+                <div class="md:float-left flow-root py-6 align-middle sm:ml-4">
+                    <div class="md:float-left flex items-center sm:mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-800 dark:text-red-600 size-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                         </svg>
                         <span class="mx-2 text-white">99 Roving St., Big City, PKU 23456</span>
                     </div>
-                    <div class="float-right flex items-center">
+                    <div class="md:float-right flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-800 dark:text-red-600 size-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
                           </svg>                          
                         <span class="mx-2 text-white">Hot Line : 123-234-1234</span>
                     </div>
                 </div>
-                <div class="social-contact float-right flex flex-row py-6 align-middle space-x-5">
-                    <button class="icon-before icon-chevron-right icon-space-sm">
-                        <!-- Label -->
-                    </button>
-                    <div><i class="fab fa-facebook  dark:text-red-600  text-gray-800  icon-space-sm icon-before w-4 h-4"></i></div>
+                <div class="social-contact sm:float-right flex flex-row sm:py-6 align-middle space-x-5  sm:px-4">
+                    <i class=" text-white fab fa-facebook icon-space-sm icon-before"></i>
                     <i class="text-white fab fa-instagram icon-space-sm icon-before"></i>
-                    <i class="fab fa-twitter icon-space-sm icon-before"></i>
-                    <i class="fab fa-youtube icon-space-sm icon-before"></i>
+                    <i class="text-white fab fa-twitter icon-space-sm icon-before"></i>
+                    <i class="text-white fab fa-youtube icon-space-sm icon-before"></i>
                     
                 </div>
                 <!-- <img src="./assets/img/landing_img-1.jpg" class="absolute bg-blend-screen blur-md bg-cover bg-no-repeat "/> -->
             </div>
             <!-- 2. menu -->
-            <div class="flow-root">
+            <div class="container mx-auto flow-root py-3 border-t-[1px] border-collapse">
                 <!-- left:  logo -->
-                <div class="pl-6 float-left logo pt-6">
-                    <img src="assets/img/logo.svg" />
+                <div class="pl-6 float-left logo">
+                    <img src="assets/img/atook.png" />
                 </div>
                 <!-- right: menu -->
                 <div>
                     <nav>
-                        <ul class="text-xl font-bold text-blue-500 float-right items-center space-x-5 flex-row flex p-6 font-sans">
-                            <li>
-                                <a href="#">Home</a>
+                        <ul class="md:text-xl sm:text-base font-thin text-white float-right items-center space-x-5 flex-row flex p-6 font-sans">
+                            <li >
+                                <a class="transform hover:text-red-500" href="#">Home</a>
                             </li>
                             <li>
-                                <a href="#">News</a>
+                                <a class=" hover:text-red-600" href="#">News</a>
+                            </li>
+                            <li class="group relative inline-block">
+                                <div class="inline-flex items-center">
+                                    <a class=" hover:text-red-600 mr-1" href="#">Our Service</a>
+                                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                                <ul class="absolute hidden pt-1 bg bg-cyan-900 text-white p-3 group-hover:block md:text-base sm:text-sm">
+                                    <li class="">
+                                        <a class=" hover:text-red-600" href="#">Nested Menu 1</a>
+                                    </li>
+                                    <li>
+                                        <a class=" hover:text-red-600" href="#">Nested Menu 2</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="#">Our Service</a>
+                                <a class=" hover:text-red-600" href="#">Contact Us</a>
                             </li>
-                            <li>
-                                <a href="#">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Search</a>
+                            <li class="flex items-center align-middle  space-x-5">
+                                <input type="text" name="query" id="name" class="block w-full rounded-md py-1.5 pl-2 pr-10 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6" placeholder="say something...">
+                                <i class="fas fa-search icon-after"></i>
                             </li>
                         </ul>
                     </nav>
@@ -70,23 +81,31 @@
             </div>
         </header>
         <!-- 3. banner:  -->
-        <div class="container mx-auto hero-banner">
-            <img src="">
-            <div class="introduction-hello">
-                <p>hi, there</p>
-            </div>
-            <div class="slider-introduction">
-                <p>this is slider</p>
-            </div>
-            <div class="text-center">
-                <div>           
-                    <i class="fa-solid fa-house"></i> <!--Icon-->
+        <div class="container mx-auto">
+            <div class="overflow-hidden">
+                <div class="hover:scale-110 duration-1000 overflow-hidden bg-cover bg-no-repeat p-12 sm:min-h-screen" style="background-image: url('assets/img/F1-1.jpg'); height: 400px;">
+                    <div class="overflow-hidden bg-fixed pt-6 flow-root">
+                        <div class="md:float-left sm:w-3/6 pl-8">
+                            <p class="text-red-600 uppercase pb-3 font-bold sm:text-sm">smart solution</p>
+                            <p class="text-white font-light md:text-6xl sm:text-base">Your Roof is Our <span class="text-red-600 text-6xl">Proof</span></p>
+                            <p class="font-thin text-white pt-4 items-start md:text-base sm:text-sm">
+                                Smart solution ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                            </p>
+                        </div>
+                        <div class="md:float-right sm:w-3/6 px-6">
+                            <div class="text-center">
+                                <div>           
+                                    <i class="fa-solid fa-house"></i> <!--Icon-->
+                                </div>
+                                <div class="text-xl font-semi-bold mb-5">Font Awesome Icon</div>
+                                    <p class="text-sm text-gray-400 w-60 mx-auto">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex odit?
+                                        Molestiae odio porro at sequi, vel quia corporis ex deserunt, animi, voluptates eveniet.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-xl font-semi-bold mb-5">Font Awesome Icon</div>
-                    <p class="text-sm text-gray-400 w-60 mx-auto">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex odit?
-                          Molestiae odio porro at sequi, vel quia corporis ex deserunt, animi, voluptates eveniet.
-                    </p>
             </div>
         </div>
     </div>
