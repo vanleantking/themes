@@ -3,49 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Come to us</title>
   </head>
   <body class="">
     <!-- 1. header -->
     <div>
         <header class="bg bg-cyan-900">
-            <div class="container mx-auto flow-root flex-row">
+            <div class="md:flow-root md:flex-row text-center mx-auto container">
                 <!-- 1. header: contact social icon -->
-                <div class="md:float-left flow-root py-6 align-middle sm:ml-4">
-                    <div class="md:float-left flex items-center sm:mx-2">
+                <div class="md:float-left md:flow-root md:py-6 align-middle sm:mx-auto text-center">
+                    <div class="md:float-left inline-flex items-center sm:justify-center sm:pr-10">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-800 dark:text-red-600 size-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                         </svg>
-                        <span class="mx-2 text-white">99 Roving St., Big City, PKU 23456</span>
+                        <span class="mx-2 text-white text-center">99 Roving St., Big City, PKU 23456</span>
                     </div>
-                    <div class="md:float-right flex items-center">
+                    <div class="md:float-right inline-flex items-center sm:justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-800 dark:text-red-600 size-7">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
-                          </svg>                          
-                        <span class="mx-2 text-white">Hot Line : 123-234-1234</span>
+                        </svg>                          
+                        <span class="mx-2 text-white text-center">Hot Line : 123-234-1234</span>
                     </div>
                 </div>
-                <div class="social-contact sm:float-right flex flex-row sm:py-6 align-middle space-x-5  sm:px-4">
-                    <i class=" text-white fab fa-facebook icon-space-sm icon-before"></i>
+                <div class="md:float-right social-contact sm:float-none sm:flex sm:justify-center sm:py-6 align-middle space-x-5 sm:px-4">
+                    <i class="text-white fab fa-facebook icon-space-sm icon-before"></i>
                     <i class="text-white fab fa-instagram icon-space-sm icon-before"></i>
                     <i class="text-white fab fa-twitter icon-space-sm icon-before"></i>
                     <i class="text-white fab fa-youtube icon-space-sm icon-before"></i>
-                    
                 </div>
-                <!-- <img src="./assets/img/landing_img-1.jpg" class="absolute bg-blend-screen blur-md bg-cover bg-no-repeat "/> -->
             </div>
             <!-- 2. menu -->
-            <div class="container mx-auto flow-root py-3 border-t-[1px] border-collapse">
+            <div class="container mx-auto md:flow-root py-3 border-t-[1px] border-collapse">
                 <!-- left:  logo -->
-                <div class="pl-6 float-left logo">
+                <div class="md:float-left sm:w-80 justify-center mx-auto md:w-6/12 w-[150px]">
                     <img src="assets/img/atook.png" />
                 </div>
                 <!-- right: menu -->
-                <div>
+                <div class="md:float-right md:flex">
                     <nav>
-                        <ul class="md:text-xl sm:text-base font-thin text-white float-right items-center space-x-5 flex-row flex p-6 font-sans">
+                        <!-- Mobile Menu Button -->
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 6h16.5m-16.5 6h16.5" />
+                            </svg>
+                        </button>
+                        <!-- Mobile Menu (hidden by default) -->
+                        <div id="menu" class="md:hidden mt-4 bg-red-600">
+                            <a href="#" class="block text-white py-2">Home</a>
+                            <a href="#" class="block text-white py-2">About</a>
+                            <a href="#" class="block text-white py-2">Services</a>
+                            <a href="#" class="block text-white py-2">Contact</a>
+                        </div>
+                        <ul class="hidden md:text-xl sm:text-base font-thin text-white float-right items-center space-x-5 flex-row md:flex p-6 font-sans">
                             <li >
                                 <a class="transform hover:text-red-500" href="#">Home</a>
                             </li>
@@ -54,12 +66,12 @@
                             </li>
                             <li class="group relative inline-block">
                                 <div class="inline-flex items-center">
-                                    <a class=" hover:text-red-600 mr-1" href="#">Our Service</a>
+                                    <a class="hover:text-red-600 mr-1" href="#">Our Service</a>
                                     <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <ul class="absolute hidden pt-1 bg bg-cyan-900 text-white p-3 group-hover:block md:text-base sm:text-sm">
+                                <ul class="absolute z-10 hidden pt-1 bg bg-cyan-900 text-white p-3 group-hover:block md:text-base sm:text-sm">
                                     <li class="">
                                         <a class=" hover:text-red-600" href="#">Nested Menu 1</a>
                                     </li>
@@ -81,27 +93,33 @@
             </div>
         </header>
         <!-- 3. banner:  -->
-        <div class="container mx-auto">
+        <div class="overflow-hidden">
+            <div class="absolute opacity-1 duration-300 bg-gradient-to-l from-transparent to-black md:h-[700px] w-full"></div>
             <div class="overflow-hidden">
-                <div class="hover:scale-110 duration-1000 overflow-hidden bg-cover bg-no-repeat p-12 sm:min-h-screen" style="background-image: url('assets/img/F1-1.jpg'); height: 400px;">
-                    <div class="overflow-hidden bg-fixed pt-6 flow-root">
+                <div class="duration-1000 overflow-hidden bg-cover bg-no-repeat md:p-12 p-3 md:h-[700px]" style="background-image: url('assets/img/F1-1.jpg');">
+                    <div class="container mx-auto relative overflow-hidden bg-fixed md:pt-6 flow-root">
                         <div class="md:float-left sm:w-3/6 pl-8">
                             <p class="text-red-600 uppercase pb-3 font-bold sm:text-sm">smart solution</p>
-                            <p class="text-white font-light md:text-6xl sm:text-base">Your Roof is Our <span class="text-red-600 text-6xl">Proof</span></p>
-                            <p class="font-thin text-white pt-4 items-start md:text-base sm:text-sm">
+                            <p class="text-white font-extrabold font-sans text-base leading-3 md:text-8xl md:leading-[1em]">Your Roof is Our <span class="text-red-600 text-6xl">Proof</span></p>
+                            <p class="font-thin text-white pt-4 items-start md:text-base sm:text-sm md:mb-6">
                                 Smart solution ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                             </p>
+                            <button class="bg-red-600 py-6 px-[50px] text-white uppercase font-mono hover:border-2 hover:border-white hover:text-white duration-500 translate-x-6">
+                                <span><i class="fas fa-chevron-right"></i></span>
+                                Discover now
+                            </button>
+
                         </div>
-                        <div class="md:float-right sm:w-3/6 px-6">
-                            <div class="text-center">
-                                <div>           
-                                    <i class="fa-solid fa-house"></i> <!--Icon-->
-                                </div>
-                                <div class="text-xl font-semi-bold mb-5">Font Awesome Icon</div>
-                                    <p class="text-sm text-gray-400 w-60 mx-auto">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sed ex odit?
-                                        Molestiae odio porro at sequi, vel quia corporis ex deserunt, animi, voluptates eveniet.
-                                    </p>
+                        <div class="md:float-right sm:w-3/6 px-6 py-6">
+                            <div class="relative" style="padding-top: 56.25%">
+                                <iframe class="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/8mAITcNt710?si=lC9Bk_wHb2dBAdI1"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
                             </div>
                         </div>
                     </div>
